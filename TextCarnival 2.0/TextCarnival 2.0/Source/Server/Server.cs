@@ -212,7 +212,7 @@ namespace TextCarnivalV2.Source.Server
                 }
 
                 if (!runningDebug)
-                    Console.WriteLine("Client playing game ({0})", allGames[index-1]);
+                    Console.WriteLine("Client playing game ({0})", allGames[index - 1].getName());
 
                 allGames[index-1].setup(send, readData);
                 allGames[index-1].play();

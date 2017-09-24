@@ -115,10 +115,11 @@ namespace TextCarnivalV2.Source.CarnivalGames
         
         //Called to play the game, have all of the main game code in here
         //When this method ends, the game is ended
-        public abstract void play();        
+        public abstract void play();
 
         //Gets the name of the client for the menu
         public abstract string getName();
 
+            
     }
 }
