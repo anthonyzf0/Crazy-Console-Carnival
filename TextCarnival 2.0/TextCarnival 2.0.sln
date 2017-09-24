@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TextCarnivalV2", "TextCarnival 2.0\TextCarnivalV2.csproj", "{BE2B1FBE-3790-4059-A55E-8CBE16B5E600}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TextCarnival", "TextCarnival 2.0\TextCarnival.csproj", "{BE2B1FBE-3790-4059-A55E-8CBE16B5E600}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

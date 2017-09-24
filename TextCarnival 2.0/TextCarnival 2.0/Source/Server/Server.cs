@@ -66,7 +66,7 @@ namespace TextCarnivalV2.Source.Server
             //Show possible ips
             Console.WriteLine("What Ip will you host on?");
             for (int i = 0; i < ips.Count; i++)
-                Console.WriteLine("[{0}] : {1}", i, ips[i]);
+                Console.WriteLine("[{0}] : {1}", i+1, ips[i]);
 
             while (true)
             {
@@ -74,8 +74,12 @@ namespace TextCarnivalV2.Source.Server
                 int index = -1;
                 int.TryParse(val, out index);
 
-                if (index < 1 || index > ips.Count) continue;
-                return ips[index];
+                if (index < 1 || index > ips.Count)
+                {
+                    Console.WriteLine("Not a ip");
+                    continue;
+                }
+                return ips[index-1];
             }
             
         }
