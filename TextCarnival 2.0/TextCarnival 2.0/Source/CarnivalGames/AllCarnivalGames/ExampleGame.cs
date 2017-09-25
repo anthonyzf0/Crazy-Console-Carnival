@@ -66,25 +66,44 @@ namespace TextCarnivalV2.Source.CarnivalGames.AllCarnivalGames
             //Gets a option
             String gender = getOption("boy", "girl");       //YES! in this case there are two options, this is for learning
 
-            writeLine("See there how I restricted it to whatever I wanted, not just yes or no");
+            writeLine("See there how I restricted it to whatever I wanted, not just yes or no?");
 
-            writeLine("You can also have the user wait for something, or for a specific amount of time");
+            wait(0.5);
+
+            //Writes the line, character by character
+            writeOut("Hey! look at this line, it is writing itself, isnt that cool!");
+            writeOut("TEST!");
+            writeOut("TEST!");
+            writeOut("TEST!");
+
+            writeOut("cool right!");
+
+            getYesNo();
+        
+            //Clears console
+            clear();
+
+            writeOut("You can also clear the screen like i just did!");
+
+            wait(0.5);
+
+            writeOut("You can also have the user wait for something, or for a specific amount of time");
 
             //Waits x amoutn of seconds, doesnt have to be a whole number
             wait(3.1);
 
-            writeLine("That was 3 seconds");
+            writeOut("That was 3 seconds");
 
             wait(2);
 
-            writeLine("And that was another 2");
+            writeOut("And that was another 2");
 
-            writeLine("You can even make it super dramatic if you want");
+            writeOut("You can even make it super dramatic if you want");
 
             //The number specifies how many seconds it waits
             dramaticPause(3);
 
-            writeLine("Do you get it so far?");
+            writeOut("Do you get it so far?");
 
             //Gets yes no
             bool stillGetsIt = getYesNo();
@@ -92,19 +111,19 @@ namespace TextCarnivalV2.Source.CarnivalGames.AllCarnivalGames
             //YOu can use custom colors
             showSeperator(30,"|e0","|d0");
 
-            writeLine("Oh, by the way, whats your name");
+            writeOut("Oh, by the way, whats your name");
 
             String name = getInput();
 
-            writeLine("See, " + name + " this can also get raw inputs too");
+            writeOut("See, " + name + " this can also get raw inputs too");
 
             wait(1);
 
-            writeLine("If you want you can also make the console play sounds");
+            writeOut("If you want you can also make the console play sounds");
 
             //Makes the console beep
             beep();
-            
+
             writeLine("They are fairly basic, but you can specify frequency and durration if you want");
 
             //Using the beep command you can specify frequency and durration
@@ -112,6 +131,16 @@ namespace TextCarnivalV2.Source.CarnivalGames.AllCarnivalGames
             beep(800, 0.5f);
             beep(900, 0.4f);
             beep(600, 1);
+
+            writeLine("Thats kinda cool, right!");
+            writeLine("If you combine some of these features you can do things like this!");
+            writeLine("Wana see?");
+            getYesNo();
+
+            //This prints out text to try to sound like a type writer
+            typeWriter("This is very slow, but kinda cool!");
+
+            wait(1);
 
             writeLine("Thats about all that this can do.");
             

@@ -3,3 +3,4 @@ C:\Users\antho\OneDrive\Documents\GitHub\Crazy-Console-Carnival\TextCarnival 2.0
 C:\Users\antho\OneDrive\Documents\GitHub\Crazy-Console-Carnival\TextCarnival 2.0\TextCarnival 2.0\bin\Debug\TextCarnival 2.0.pdb
 C:\Users\antho\OneDrive\Documents\GitHub\Crazy-Console-Carnival\TextCarnival 2.0\TextCarnival 2.0\obj\Debug\TextCarnival 2.0.exe
 C:\Users\antho\OneDrive\Documents\GitHub\Crazy-Console-Carnival\TextCarnival 2.0\TextCarnival 2.0\obj\Debug\TextCarnival 2.0.pdb
+C:\Users\antho\OneDrive\Documents\GitHub\Crazy-Console-Carnival\TextCarnival 2.0\TextCarnival 2.0\obj\Debug\TextCarnival.csprojResolveAssemblyReference.cache

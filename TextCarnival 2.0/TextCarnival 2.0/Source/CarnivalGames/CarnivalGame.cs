@@ -81,6 +81,46 @@ namespace TextCarnivalV2.Source.CarnivalGames
             writeLine("");
         }
 
+        //Clears console
+        public void clear()
+        {
+            output("cler");
+        }
+
+        //Writes out a string character by character
+        public void writeOut(String s)
+        {
+            foreach (char c in s)
+            {
+                if (c != '|')
+                {
+                    write(c + "");
+                    wait(0.01);
+                }
+            }
+            writeLine("");
+        }
+
+        //Slow way to write out that tries to be typeWriter is
+        public void typeWriter(String s)
+        {
+            foreach (char c in s)
+            {
+                if (c != '|' && c != ' ')
+                {
+                    write(c + "");
+                    beep(500, 0.1f);
+                    wait(0.3);
+                }
+                else
+                {
+                    write(" ");
+                    wait(0.5);
+                }
+            }
+            writeLine("");
+        }
+
         //gets a yes or no value from the user using the getOption method
         public bool getYesNo()
         {

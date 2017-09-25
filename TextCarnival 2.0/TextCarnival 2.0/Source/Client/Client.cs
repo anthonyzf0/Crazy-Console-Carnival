@@ -130,6 +130,12 @@ namespace TextCarnivalV2.Source.Client
                             Console.Beep(Convert.ToInt16(vals[1]), (int)(Convert.ToDouble(vals[2])*1000));
                             
                             break;
+
+                        case "cler":
+
+                            Console.Clear();
+
+                            break;
                             
                     }
                 }
