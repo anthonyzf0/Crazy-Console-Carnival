@@ -20,7 +20,15 @@ namespace TextCarnivalV2.Source.CarnivalGames.AllCarnivalGames
 
         public override void play()
         {
-            
+            showTitle("Welcome to Hangman!!!!!!");
+
+            writeOut("I'm just going to assume you already know what hangman is and how to play...(you need at least a second person)...");
+
+            writeOut("Have one person choose a word for you to guess: ");
+            String word = getInput();
+
+            clear();
+            write("-----\nl    l\nl\nl\nl\nl\n-----------");
         }
     }
 }
