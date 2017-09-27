@@ -156,6 +156,21 @@ namespace TextCarnivalV2.Source.Server
             return data;
         }
 
+        public ConsoleKey readKey()
+        {
+            send("rkey");
+
+            bytes = new Byte[1024];
+            int i = stream.Read(bytes, 0, bytes.Length);
+            String data = (Encoding.ASCII.GetString(bytes, 0, i));
+
+            int key = 0;
+            if (int.TryParse(data, out key))
+                return (ConsoleKey)key;
+
+            return ConsoleKey.PrintScreen;
+        }
+
         //Writes data
         public bool writeData(String data)
         {
@@ -216,7 +231,7 @@ namespace TextCarnivalV2.Source.Server
                 if (!runningDebug)
                     Console.WriteLine("Client playing game ({0})", allGames[index - 1].getName());
 
-                allGames[index-1].setup(send, readData);
+                allGames[index-1].setup(send, readData, readKey);
                 allGames[index-1].play();
 
                 //Resets the color data
