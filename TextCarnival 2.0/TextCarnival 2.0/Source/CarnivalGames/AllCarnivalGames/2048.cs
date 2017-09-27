@@ -23,6 +23,15 @@ namespace TextCarnivalV2.Source.CarnivalGames.AllCarnivalGames
             //Shows the green title text
             showTitle("WELCOME TO 2048!");
 
+            while(true)
+            {
+                writeLine("Press a key: ");
+
+                ConsoleKey key = getKey();
+
+                Console.WriteLine("\nYou pressed: " + key + "\n");
+            }
+
             writeLine("This is a basic tutorial on how to use this text basted engine and make games");
             writeLine("Follow along with it both in the console and in the code to see what to do");
 
