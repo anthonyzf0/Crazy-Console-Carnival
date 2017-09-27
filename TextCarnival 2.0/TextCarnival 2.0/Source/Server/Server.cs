@@ -200,6 +200,8 @@ namespace TextCarnivalV2.Source.Server
 
                 for (int i = 0; i < allGames.Length; i++)
                     writeData("[" + (i+1) + "] " + allGames[i].getName());
+
+                writeData("Choose your carnival game: ");
                 
                 String val = readData();
                 int index = -1;
