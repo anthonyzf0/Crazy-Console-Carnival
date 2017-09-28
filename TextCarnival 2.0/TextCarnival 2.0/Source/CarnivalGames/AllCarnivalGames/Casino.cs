@@ -231,7 +231,7 @@ namespace TextCarnivalV2.Source.CarnivalGames.AllCarnivalGames
         {
             get
             {
-                return rank;
+                return rank > 10 ? 10 : rank;
             }
         }
 
