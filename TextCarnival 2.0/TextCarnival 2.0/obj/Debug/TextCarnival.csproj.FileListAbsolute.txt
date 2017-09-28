@@ -16,3 +16,4 @@ C:\Users\Connor\Documents\GitHub\Crazy-Console-Carnival\TextCarnival 2.0\TextCar
 C:\Users\Connor\Documents\GitHub\Crazy-Console-Carnival\TextCarnival 2.0\TextCarnival 2.0\obj\Debug\TextCarnival.csprojResolveAssemblyReference.cache
 C:\Users\Connor\Documents\GitHub\Crazy-Console-Carnival\TextCarnival 2.0\TextCarnival 2.0\obj\Debug\TextCarnival 2.0.exe
 C:\Users\Connor\Documents\GitHub\Crazy-Console-Carnival\TextCarnival 2.0\TextCarnival 2.0\obj\Debug\TextCarnival 2.0.pdb
+C:\Users\eahscs\Documents\GitHub\Crazy-Console-Carnival\TextCarnival 2.0\TextCarnival 2.0\obj\Debug\TextCarnival.csprojResolveAssemblyReference.cache
