@@ -19,5 +19,15 @@ namespace TextCarnivalV2.Source.CarnivalGames.AllCarnivalGames
             return "When The Haters Dab Back!?!?";
         }
 
+        public override void play()
+        {
+            showTitle("Welcome Tic Dab Toe");
+
+            writeOut("DAB ON THEM HATERS!!!!!");
+            writeOut("X will start");
+
+
+          
+        }
     }
 }
