@@ -16,21 +16,58 @@ namespace TextCarnivalV2.Source.CarnivalGames.AllCarnivalGames
 
         public override void play()
         {
+            List<string> SBtext = new List<string>( new string[] { "Hmm... Tell me more.", "Interesting, please go on.", "Try saying 'Be a Comedian'"} );
+            Random rand = new Random();
+
+
+            String userResponse;
+
             showTitle("WELCOME TO SMARTBOT");
 
             writeOut("Hello, my name is SmartBot. What is yours?");
             write("|a0> ");
-            String name = Console.ReadLine();
+            String name = getInput();
 
-            writeOut("Hello " + name + ", are you ejoying this?\n[Yes] or [No]");
-            String response = Console.ReadLine();
+            writeOut("Hello " + name + ", are you enjoying this?\n[Yes] or [No]");
+            write("|a0> ");
+            bool response = getYesNo();
 
-            response = response.ToLower();
-
-            if(response != "yes" || response != "no")
+            if(response)
             {
-                writeOut("");
+                writeOut("That's great " + name);
+                write("|a0> ");
+                userResponse = getInput();
             }
+
+            for (int i = 0; i <= int.MaxValue; i++)
+            {
+                if (userResponse)
+                {
+
+                }
+
+
+
+                else
+                {
+                    writeOut(SBtext[rand.Next(0, 3)]);
+                    write("|a0> ");
+                    userResponse = getInput();
+                }
+            }
+
+
+
+
+
+
+
+
+
+
+
+            
+            
 
 
         }
