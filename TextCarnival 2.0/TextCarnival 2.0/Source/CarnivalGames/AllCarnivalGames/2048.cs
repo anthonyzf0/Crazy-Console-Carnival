@@ -61,6 +61,7 @@ namespace TextCarnivalV2.Source.CarnivalGames.AllCarnivalGames {
                     if (arr[i, j] != 0)
                     {
                         buffer += arr[i, j];
+                        if (arr[i, j] < 10)
                         {
                             buffer += " ";
                         }
