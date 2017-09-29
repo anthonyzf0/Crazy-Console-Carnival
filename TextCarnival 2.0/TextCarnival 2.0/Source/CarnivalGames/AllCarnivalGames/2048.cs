@@ -4,8 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TextCarnivalV2.Source.CarnivalGames.AllCarnivalGames {
-    class _2048 : CarnivalGame {
+namespace TextCarnivalV2.Source.CarnivalGames.AllCarnivalGames
+{
+    class _2048 : CarnivalGame
+    {
         public _2048() : base()
         {
 
@@ -24,6 +26,7 @@ namespace TextCarnivalV2.Source.CarnivalGames.AllCarnivalGames {
 
             bool finished = false;
             int[,] board = new int[4, 4];
+            int[,] oldBoard = board.Clone() as int[,];
 
             // spawn 2 random tiles
             board = spawnTile(board, 2);
@@ -36,9 +39,19 @@ namespace TextCarnivalV2.Source.CarnivalGames.AllCarnivalGames {
 
                 clear();
 
+                oldBoard = board.Clone() as int[,];
+
                 board = shiftBoard(board, dir);
 
-                board = spawnTile(board, 1);
+                if (boardChanged(oldBoard, board))
+                {
+                    board = spawnTile(board, 1);
+                }
+                else
+                {
+                    writeLine("NO CHANGE!");
+                }
+
 
                 showTitle("WELCOME TO 2048!");
 
@@ -122,6 +135,25 @@ namespace TextCarnivalV2.Source.CarnivalGames.AllCarnivalGames {
                 }
             }
             return count;
+        }
+
+        private bool boardChanged(int[,] start, int[,] end)
+        {
+            if (start.GetLength(0) != end.GetLength(0) || start.GetLength(1) != end.GetLength(1))
+            {
+                return true;
+            }
+            for (int i = 0; i < start.GetLength(0); i++)
+            {
+                for (int j = 0; j < start.GetLength(1); j++)
+                {
+                    if (start[i, j] != end[i, j])
+                    {
+                        return true;
+                    }
+                }
+            }
+            return false;
         }
 
         private int[,] shiftBoard(int[,] board, String dir)
