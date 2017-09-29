@@ -316,7 +316,7 @@ namespace TextCarnivalV2.Source.CarnivalGames.AllCarnivalGames {
             // move top to bottom (rows)
             for (int i = 0; i < board.GetLength(0); i++)
             {
-                // move left to right (columns)
+                // move right to left (columns)
                 for (int j = board.GetLength(1) - 1; j > 0; j--)
                 {
                     // combine tiles
