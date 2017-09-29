@@ -129,7 +129,7 @@ namespace TextCarnivalV2.Source.CarnivalGames.AllCarnivalGames {
             if (dir == "UpArrow")
             {
                 board = shiftUp(board);
-                board = combineDown(board);
+                board = combineUp(board);
                 board = shiftUp(board);
             }
 
