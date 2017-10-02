@@ -15,79 +15,65 @@ namespace TextCarnivalV2.Source.CarnivalGames.AllCarnivalGames
 
         public override string getName()
         {
-            return "Turn Based RPG";
+            return "Roulette";
         }
 
         public override void play()
         {
-            // class choice
-            writeOut("CHOOSE A CLASS! ");
-            writeOut("Mage or Warrior");
-            String choice = getOption("Mage", "Warrior");
-            
-            // variables
-            String abName1;
-            String abName2;
-            int roomNum = 0;
-            String option;
-            int health = 100;
 
-            // ability set up
-            if ( choice == "Mage")
-            {
-                abName1 = "Fireball";
-                abName2 = "Staff Pummle";
-            }
-            else
-            {
-                abName1 = "Slash";
-                abName2 = "Sheild Bash";
-            }
+
+            // variables
+            int chips = 500;
+            int amount = 0;
+            int betAmount = 0;
+            String color;
+            int number = 0;
+
+            
 
             // intro
-            writeOut("You are a travler seeking adventure and fortune..... You wlaked through a tunnle into a cave......  You know that there is a treasure in thses parts, and you have made it to the dungeon.");
+            writeOut("You start with 500 chips");
 
+            writeOut("Would you like to bet on a color or number");
+            String option = getOption("color", "number");
 
-
-            // writeOut("Do you turn left or right");
-            // option = getOption("left", "right");
-
-            /*/
-            public String LorF(String op)
+            if(option == "color")
             {
-
-
-                if (op == "left")
-                {
-                    return roomNum--;
-                }
-                else
-                {
-                    return roomNum++;
-                }
+                writeOut("Which color red or black");
+                color = getOption("red", "black");
             }
 
-            public int encounter(int num)
+            else
             {
-                if(num == 0)
-                {
-                    writeLine("You are in the entrance once again ");
+                writeOut("Which number would you like to bet on?");
+                number = Convert.ToInt32(getInput());
 
+                writeOut("How many chips would you like to bet?");
+                betAmount = Convert.ToInt32(getInput());
+
+                Random roller = new Random();
+                int num1 = roller.Next(0, 36);
+
+                if (number == num1)
+                {
+                    // do the payout
                 }
 
-                if(num == -1)
-                {
-                    writeLine("");
-                }
 
 
             }
-            /*/
+
+            
+           
+                
+                
+                
+                
+                // if( selection == evens && roller %2 == 0)
+            
 
 
-            writeOut("You appear in the next room, and you are faced with 4 maddened goblins. They are prepared to take you out of their home by force.");
-            wait(1);
-            writeOut("You are now in combat");
+            
 
 
 
