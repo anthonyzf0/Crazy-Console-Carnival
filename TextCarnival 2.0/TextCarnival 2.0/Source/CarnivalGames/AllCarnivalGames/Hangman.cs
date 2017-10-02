@@ -9,7 +9,7 @@ namespace TextCarnivalV2.Source.CarnivalGames.AllCarnivalGames
     class Hangman : CarnivalGame
     {
         int tries = 5;
-        String word;
+        String word = "";
         String word1 = "";
         String letters = "";
 
@@ -30,12 +30,21 @@ namespace TextCarnivalV2.Source.CarnivalGames.AllCarnivalGames
             writeOut("I'm just going to assume you already know what hangman is and how to play...(you need at least a second person)...");
 
             writeOut("Have one person choose a word for you to guess: ");
-            word = getInput();
+            String[] parts = getInput().Split(' ');
+            foreach (String s in parts)
+            {
+                word += s;
+            }
 
             clear();
             foreach (char c in word)
             {
                 word1 += "-";
+            }
+
+            while (word1 != word && tries != 0)
+            {
+                update();
             }
         }
 
@@ -51,14 +60,42 @@ namespace TextCarnivalV2.Source.CarnivalGames.AllCarnivalGames
                 input = getInput();
                 if (word.Contains(input) && !letters.Contains(input))
                 {
-                    word1.
+                    char[] h = word1.ToCharArray();
+                    String temp = "";
+                    for (int i = 0; i < word.Length; i++)
+                    {
+                        if (word[i].ToString() == input && h[i] == '-')
+                        {
+                            h[i] = input.ToCharArray()[0];
+                            temp += input;
+                        }
+                        else
+                        {
+                            temp += h[i];
+                        }
+                        word1 = temp;
+                    }
+                }
+                else
+                {
+                    tries--;
                 }
             }
             else
             {
                 write("\nGuess the phrase: ");
                 input = getInput();
+
+                if (input == word)
+                {
+                    word1 = input;
+                }
+                else
+                {
+                    tries--;
+                }
             }
+            clear();
         }
     }
 }
