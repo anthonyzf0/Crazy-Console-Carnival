@@ -15,7 +15,7 @@ namespace TextCarnivalV2.Source
 
         //To run this game in debug mode rather than as a client or a server, set this to true
         //That will allow it to run without a server connection
-        public static bool runInDebug = true;
+        public static bool runInDebug = false;
 
         //Game starts here, this method is run to start the game
         static void Main(string[] args)
