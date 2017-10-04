@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TextCarnivalV2.Source.CarnivalGames.AllCarnivalGamesClasses;
 
 namespace TextCarnivalV2.Source.CarnivalGames.AllCarnivalGames
 {
@@ -41,7 +42,7 @@ namespace TextCarnivalV2.Source.CarnivalGames.AllCarnivalGames
 
         }
 
-        public void ShuffleDeck ()
+        public void ShuffleDeck()
         {
             Random rand = new Random(System.Environment.TickCount);
 
@@ -58,14 +59,33 @@ namespace TextCarnivalV2.Source.CarnivalGames.AllCarnivalGames
         {
             return "Casino Chloe";
         }
-        
+
         public override void play()
         {
             List<Card> dealerCards = new List<Card>();
             List<Card> playerCards = new List<Card>();
 
+            dealerCards.Add(cards[0]);
+            cards.RemoveAt(0);
 
+            playerCards.Add(cards[0]);
+            cards.RemoveAt(0);
 
+            dealerCards.Add(cards[0]);
+            cards.RemoveAt(0);
+
+            playerCards.Add(cards[0]);
+            cards.RemoveAt(0);
+
+            writeLine("Dealer cards: " + dealerCards[0].Name + ", [hidden]");
+
+            writeLine("Are you a [boy] or a [girl]?");      //OMG dont get triggered, its an example
+
+            //Gets a option
+            writeLine(" [hit] or a [stand]?");
+            String choice = getOption("hit", "stand");
+
+            getYesNo();
             /*
             //Shows the green title text
             showTitle("WELCOME TO THE EXAMPLE GAME!");
@@ -207,6 +227,11 @@ namespace TextCarnivalV2.Source.CarnivalGames.AllCarnivalGames
         }
 
     }
+
+}
+
+namespace TextCarnivalV2.Source.CarnivalGames.AllCarnivalGamesClasses
+{
 
     class Card
     {
