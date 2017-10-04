@@ -20,7 +20,7 @@ namespace TextCarnivalV2.Source.CarnivalGames.AllCarnivalGames
             Random rand = new Random();
 
 
-            String userResponse;
+            String userResponse = "";
 
             showTitle("WELCOME TO SMARTBOT");
 
@@ -39,14 +39,46 @@ namespace TextCarnivalV2.Source.CarnivalGames.AllCarnivalGames
                 userResponse = getInput();
             }
 
-            for (int i = 0; i <= int.MaxValue; i++)
+            while (true)
             {
-                if (userResponse)
-                {
+                List<String> Jokes = new List<string>() { "Why couldn't the blond add 10 and 7 on a calculator?\n\nBecause she couldn't find the 10 key",
+                            "What did one penny say to another penny?\n\nLet's get together and make cents!",
+                            "What do you call someone with a mental deficiency?\n\nRetarded!"};
 
+                if (userResponse == "thank you")
+                {
+                    writeOut("You're welcome!");
+                    write("|a0> ");
+                    userResponse = getInput();
                 }
 
+                if (userResponse == "be a comedian")
+                {
+                    int jokes = 3;
 
+                    writeOut("Hello, " + name + " and welcome to 'Comedian Mode' where all your dreams come true. You will get a list of 10 random jokes, once the 10 jokes have been told, you will reenter 'Normal Mode'.");
+                    write("|a0> ");
+                    userResponse = getInput();
+
+                    while (jokes > 0)
+                    {
+                        jokes--;
+
+                        
+
+
+                        writeOut(Jokes[0]);
+                        write("|a0> ");
+                        userResponse = getInput();
+
+
+                        Jokes.RemoveAt(0);
+
+                        
+                    }
+
+
+                }
 
                 else
                 {
