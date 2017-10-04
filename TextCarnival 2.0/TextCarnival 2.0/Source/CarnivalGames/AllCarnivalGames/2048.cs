@@ -427,7 +427,8 @@ namespace TextCarnivalV2.Source.CarnivalGames.AllCarnivalGames
                 {7, "|1f"}, // dark blue on white
                 {8, "|2f"}, // dark green on white
                 {9, "|3f"}, // dark cyan on white
-                {10, "0f"} // black on white
+                {10, "|0f"}, // black on white
+                {11, "|0f"} // black on white
             };
         }
 
