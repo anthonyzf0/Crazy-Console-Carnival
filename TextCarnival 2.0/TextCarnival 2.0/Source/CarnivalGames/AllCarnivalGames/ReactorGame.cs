@@ -27,30 +27,42 @@ namespace TextCarnivalV2.Source.CarnivalGames.AllCarnivalGames
             writeLine("Ready?");
             bool ready = getYesNo();
 
-            Random rnd = new Random();
-            int letter = rnd.Next(1, 27);
+            
 
             String abc = "abcdefghijklmnopqrstuvwxyz";
             int correct = 0;
             int wrong = 0;
                 
-            if(!ready)
+            if(!ready)    
             {
                 writeLine("Aww to bad. You don't play the game. You lose. Good day sir. GG NO RE.");
             }
-            
-            while(wrong < 1 )
+            if (ready)
             {
-                if(ready)
+
+                while (wrong < 1)
                 {
-                    writeLine(abc[letter - 1] + "");
-
+                    Random rnd = new Random();
+                    int letter = rnd.Next(1, 27);
+                    if (ready)
+                    {
+                        writeLine(abc[letter - 1] + "");
+                        ConsoleKey key = getKey();
+                        writeLine("");
+                       
+                        if (key.ToString().ToLower() == abc[letter - 1] + "")
+                        {
+                          correct++;
+                        }
+                       else
+                        {
+                           wrong++;
+                        }
+                    }
                 }
-
-                writeLine("Press a key");
-                ConsoleKey key = getKey();
-                writeLine("You pressed " + key.ToString());
+                writeLine("Congrats you got " + correct + " correct!");
             }
+
 
         }
     }
