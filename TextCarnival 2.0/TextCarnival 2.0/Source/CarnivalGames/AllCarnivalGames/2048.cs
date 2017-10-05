@@ -144,7 +144,8 @@ namespace TextCarnivalV2.Source.CarnivalGames.AllCarnivalGames
                         {
                             if (count == position)
                             {
-                                board[i, j] = 2;
+                                int newTile = random.Next(0, 10) != 0 ? 2 : 4; // 10% chance of spawning a 4, else spawn a 2
+                                board[i, j] = newTile;
                             }
                             count++;
                         }
