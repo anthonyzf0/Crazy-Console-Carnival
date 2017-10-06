@@ -56,7 +56,7 @@ namespace TextCarnivalV2.Source.CarnivalGames.AllCarnivalGames
 
             if (opt1 == "work")
             {
-                writeOut("You decided to work longer");
+                writeLine("|e0You decided to work longer");
                 wait(2);
                 int money = 200;
                 writeOut("A new face, Roger, walks in and asks for some beer");
@@ -71,39 +71,94 @@ namespace TextCarnivalV2.Source.CarnivalGames.AllCarnivalGames
                 wait(2);
                 writeOut("On his way out he hands you a card with a number on it. \"The new leaders of Ruckersburg\" it says.");
                 wait(2);
-                writeOut("You've heard of this group, they are a rebellion group trying to \"restore humans to there former glory\");
+                writeOut("You've heard of this group, they are a rebellion group trying to restore humans to there former glory");
                 wait(2);
                 writeOut("You are not particularly convinced by any rebellion groups, but you take the card, serve a few more people, and before you know it the shift is over.");
+                int rogera = 3;
                 wait(2);
-                writeOut("You got $200 for the night");
+                writeOut("Your attitude with certain charactersd will change depending on how you intereact with them");
                 wait(2);
+                writeOut("Your attitude with Roger is now " + rogera);
+                wait(2);
+                writeOut("|e0You got $" + money + " for the night");
+
+               wait(2);
                 writeOut("While at home, the card is taunting you, asking you to call the number");
                 wait(2);
-                writeOut("Do you [call] or [ignore]");
-                wait(2);
-                writeOut("This is where your personality meter is introduced, the more rebellious options you choose the lower your score goes");
+                writeOut("This is where your personality score is introduced, the more rebellious options you choose the lower your score goes");
                 wait(2);
                 writeOut("The less rebellious options you choose the higher your score goes.");
                 wait(2);
                 writeOut("some choices can only be accessed with a high or low score");
                 wait(2);
+                
+                writeOut("Do you [call] or [ignore]");
+                wait(2);
                 String opt2 = getOption("call", "ignore");
                    if(opt2 == "call")
                     {
                     int meter = -3;
-                    writeOut("Your personality score is now" + meter);
+                    writeOut("Your personality score is now " + meter);
+                    wait(2);
+                    writeOut("A deep voiced man picks up the phone");
+                    wait(2);
+                    writeOut("\"Who gave you this number\" asked the man");
+                    wait(2);
+                    writeOut("Do you [tell] or [avoid]");
+                    String opt3 = getOption("tell", "avoid");
+                        if(opt3 == "tell")
+                         {
+                        writeOut("The man tells you he will be contacting you from this number tommorow at 9pm");
+                        wait(2);
+                        writeOut("the line goes dead");
+                        wait(2);
+                        writeOut("You wake up ready to work. Saturdays are always the most relaxing time");
+                        wait(2);
+                        writeOut("You can't get that call out of your head");
+                        wait(2);
+                        writeOut("You get home and spend the evening waiting by your phone");
+                        wait(2);
+                        writeOut("7:30, 8:00, 8:30, time feels like it has slowed down");
+                        wait(2);
+                        writeOut("finally, 9:00");
+                        wait(2);
+                        writeOut("the phone rings and all you here is \"Bigslice park\"");
+                        wait(2);
+                        writeOut("You kow exctly where that is. it's just a coulple minute drive from here");
+                        wait(2);
+                        writeOut("Do you [go] or [stay]");
+                        String opt4 = getOption("go", "stay");
+                            if(opt4 == "go")
+                        {
+                            
+                        }
+                            if(opt4 == "stay")
+                        {
+                            writeLine("|e0You decide not to go");
+                        }
                     }
+                        if (opt3 == "avoid")
+                         {
+                        //same as ignore path
+                        writeOut("the line goes dead");
+                        wait(2);
+                        writeOut("you call back multiple times, but nobody ever picks up");
+                         }
+
+                }
                    if(opt2 == "ignore")
                     {
                     int meter = 3;
-                    writeOut("Your personality score is now" + meter);
+                    writeLine("|e0Your personality score is now " + meter);
+                    wait(2);
+                    writeOut("");
                 }
             }
             if (opt1 == "leave")
             {
-                writeOut("You decided to leave");
+                writeLine("|e0You decided to leave");
                 int money = 150;
-                writeOut("You got $150 for the night");
+                writeOut("You got $" + money +" for the night");
             }
 
 
