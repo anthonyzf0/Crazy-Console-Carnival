@@ -48,6 +48,7 @@ namespace TextCarnivalV2.Source.CarnivalGames.AllCarnivalGames
 
                 List<String> Jokes = new List<string>() { "Why couldn't the blond add 10 and 7 on a calculator?\n\nBecause she couldn't find the 10 key",
                             "What did one penny say to another penny?\n\nLet's get together and make cents!",
+                            "what's the ugliest thing in the world?\n\nlook in a mirror and you'll find out.",
                             "What do you call someone with a mental deficiency?\n\nRetarded!"};
 
                 if (userResponse == "thank you")
@@ -62,9 +63,9 @@ namespace TextCarnivalV2.Source.CarnivalGames.AllCarnivalGames
                 {
                     clear();
 
-                    int jokes = 3;
+                    int jokes = Jokes.Capacity;
 
-                    writeOut("Hello, " + name + " and welcome to 'Comedian Mode' where all your dreams come true. You will get a list of 10 random jokes, once the 10 jokes have been told, you will reenter 'Normal Mode'.");
+                    writeOut("Hello, " + name + " and welcome to 'Comedian Mode' where all your dreams come true. You will get a list of 10 random jokes,\n once the 10 jokes have been told, you will reenter 'Normal Mode'.");
                     write("|a0> ");
                     userResponse = getInput();
                     writeLine("");
