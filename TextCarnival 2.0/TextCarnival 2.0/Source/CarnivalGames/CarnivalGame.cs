@@ -12,6 +12,7 @@ namespace TextCarnivalV2.Source.CarnivalGames
         //reading / writing functions
         private Func<String, bool> output;
         private Func<String> read;
+        private Func<ConsoleKey> readKey;
 
         public CarnivalGame() {
 
@@ -41,10 +42,11 @@ namespace TextCarnivalV2.Source.CarnivalGames
             output("beep "+f+" "+t);
         }
         //Setup client
-        public void setup(Func<String, bool> writeData, Func<String> readData)
+        public void setup(Func<String, bool> writeData, Func<String> readData, Func<ConsoleKey> readKey)
         {
-            output = writeData;
-            read = readData;
+            this.output = writeData;
+            this.read = readData;
+            this.readKey = readKey;
         }
 
         //Shows this title at the begining of the game
@@ -130,7 +132,12 @@ namespace TextCarnivalV2.Source.CarnivalGames
         //Gets a generic input
         public String getInput()
         {
-            return read().ToLower();
+            return this.read().ToLower();
+        }
+
+        public ConsoleKey getKey()
+        {
+            return this.readKey();
         }
 
         //waits for a certain number of secconds
