@@ -12,6 +12,7 @@ namespace TextCarnivalV2.Source.CarnivalGames.AllCarnivalGames
         String word = "";
         String word1 = "";
         String letters = "";
+        int words;
 
         public Hangman() : base()
         {
@@ -31,6 +32,7 @@ namespace TextCarnivalV2.Source.CarnivalGames.AllCarnivalGames
 
             writeOut("Have one person choose a word for you to guess: ");
             String[] parts = getInput().Split(' ');
+            words = parts.Length;
             foreach (String s in parts)
             {
                 word += s;
@@ -51,14 +53,15 @@ namespace TextCarnivalV2.Source.CarnivalGames.AllCarnivalGames
         public void update()
         {
             writeLine("Tries: " + tries);
-            writeLine("\n" + word1 + "\n\n" + letters);
+            writeLine("\n" + word1 + "  " +  "Words: " +  words + "\n\n" + letters);
             writeLine("[guess phrase] or [guess letter]");
             String input = getOption("guess phrase", "guess letter");
             if (input == "guess letter")
             {
                 write("\nEnter a letter (that hasn't been used): ");
                 input = getInput();
-                if (word.Contains(input) && !letters.Contains(input))
+                letters += input;
+                if (word.Contains(input))
                 {
                     char[] h = word1.ToCharArray();
                     String temp = "";
