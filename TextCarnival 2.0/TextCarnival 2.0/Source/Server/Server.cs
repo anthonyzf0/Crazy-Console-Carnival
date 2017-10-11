@@ -131,7 +131,7 @@ namespace TextCarnivalV2.Source.Server
             Type[] typeList = allTypes.Where(t => String.Equals(t.Namespace, "TextCarnivalV2.Source.CarnivalGames.AllCarnivalGames", StringComparison.Ordinal)).ToArray();
 
             //Seperates and parses those types into those of Carnival Game
-            allGames = typeList.Select(i => (CarnivalGame)Activator.CreateInstance(i)).ToArray();
+            allGames = typeList.Where( i=>i.BaseType.Name == "CarnivalGame").Select(i => (CarnivalGame)Activator.CreateInstance(i)).ToArray();
 
         }
 
@@ -154,6 +154,21 @@ namespace TextCarnivalV2.Source.Server
             String data = (Encoding.ASCII.GetString(bytes, 0, i));
 
             return data;
+        }
+
+        public ConsoleKey readKey()
+        {
+            send("rkey");
+
+            bytes = new Byte[1024];
+            int i = stream.Read(bytes, 0, bytes.Length);
+            String data = (Encoding.ASCII.GetString(bytes, 0, i));
+
+            int key = 0;
+            if (int.TryParse(data, out key))
+                return (ConsoleKey)key;
+
+            return ConsoleKey.PrintScreen;
         }
 
         //Writes data
@@ -200,6 +215,8 @@ namespace TextCarnivalV2.Source.Server
 
                 for (int i = 0; i < allGames.Length; i++)
                     writeData("[" + (i+1) + "] " + allGames[i].getName());
+
+                writeData("Choose your carnival game: ");
                 
                 String val = readData();
                 int index = -1;
@@ -214,7 +231,7 @@ namespace TextCarnivalV2.Source.Server
                 if (!runningDebug)
                     Console.WriteLine("Client playing game ({0})", allGames[index - 1].getName());
 
-                allGames[index-1].setup(send, readData);
+                allGames[index-1].setup(send, readData, readKey);
                 allGames[index-1].play();
 
                 //Resets the color data

@@ -108,6 +108,12 @@ namespace TextCarnivalV2.Source.Client
 
                             break;
 
+                        case "rkey":
+
+                            sendMsg(((int)Console.ReadKey().Key).ToString());
+
+                            break;
+
                         //Server wants to display some text
                         case "show":
 
