@@ -16,16 +16,6 @@ namespace TextCarnivalV2.Source.CarnivalGames.AllCarnivalGames
             cards = new List<Card>();
 
 
-            CreateDeck();
-            ShuffleDeck();
-
-            if (Program.runInDebug)
-            {
-                for (int i = 0; i < cards.Count; i++)
-                {
-                    //WriteLine(cards[i].Name);
-                }
-            }
         }
 
         public void CreateDeck()
@@ -72,50 +62,136 @@ namespace TextCarnivalV2.Source.CarnivalGames.AllCarnivalGames
                     write("[hidden]");
                 else
                     write(cards[i].Name);
+                
             }
-            writeLine("");
+            if (!hideSecond)
+                writeLine("\nTOTAL: " + ((hideSecond) ? "[HIDDEN]" : (getTotal(cards) + "")));
+            else
+                writeLine("");
         }
+
+        public int getTotal(List<Card> cards)
+        {
+            int total = 0, othertotal = 0;
+
+            for (int i = 0; i < cards.Count; i++)
+            {
+                othertotal += cards[i].Value;
+                if (cards[i].Value == 1)
+                    othertotal += 10;
+
+                total += cards[i].Value;
+            }
+            if (othertotal > total && othertotal <= 21)
+                return othertotal;
+
+            return total;
+           // if ( = 21)
+        }
+
+        
+          
+
 
         public override void play()
         {
             List<Card> dealerCards = new List<Card>();
             List<Card> playerCards = new List<Card>();
 
-            dealerCards.Add(cards[0]);
-            cards.RemoveAt(0);
-
-            playerCards.Add(cards[0]);
-            cards.RemoveAt(0);
-
-            dealerCards.Add(cards[0]);
-            cards.RemoveAt(0);
-
-            playerCards.Add(cards[0]);
-            cards.RemoveAt(0);
-
-            //writeLine("Dealer cards: " + dealerCards[0].Name + ", [hidden]");
-            printCards(dealerCards, "Dealer", true);
-            printCards(playerCards, "Player", false);
-
-            //Gets a option
-            writeLine(" [hit] or a [stand]?");
-            String choice = getOption("hit", "stand");
-
-
-            while (choice != "stand")
+            while (true)
             {
+                CreateDeck();
+                ShuffleDeck();
+                dealerCards.Clear();
+                playerCards.Clear();
+
+                dealerCards.Add(cards[0]);
+                cards.RemoveAt(0);
+
                 playerCards.Add(cards[0]);
                 cards.RemoveAt(0);
 
+                dealerCards.Add(cards[0]);
+                cards.RemoveAt(0);
+
+                playerCards.Add(cards[0]);
+                cards.RemoveAt(0);
+
+                //writeLine("Dealer cards: " + dealerCards[0].Name + ", [hidden]");
+                printCards(dealerCards, "Dealer", true);
                 printCards(playerCards, "Player", false);
 
+                //Gets a option
                 writeLine(" [hit] or a [stand]?");
-                choice = getOption("hit", "stand");
+                String choice = getOption("hit", "stand");
+
+                bool bust = false;
+
+                while (choice != "stand")
+                {
+                    playerCards.Add(cards[0]);
+                    cards.RemoveAt(0);
+
+                    printCards(playerCards, "Player", false);
+
+                    if (getTotal(playerCards) > 21)
+                    {
+                        writeLine("Bust!");
+                        bust = true;
+                        break;
+                    }
+                    else
+                    {
+                        writeLine("Do you [hit] or a [stand]?");
+                        choice = getOption("hit", "stand");
+                    }
+                }
+
+                if (getTotal(dealerCards) >= 17)
+                    printCards(dealerCards, "Dealer", false);
+
+                if (!bust)
+                {
+                    while (getTotal(dealerCards) < 17)
+                    {
+                        dealerCards.Add(cards[0]);
+                        cards.RemoveAt(0);
+
+                        printCards(dealerCards, "Dealer", false);
+
+                        wait(1);
+                    }
+                }
+
+                int dealerTotal = getTotal(dealerCards);
+                int playerTotal = getTotal(playerCards);
+
+                if (dealerTotal > 21)
+                {
+                    writeLine("Dealer busts!  Player wins!");
+                }
+                else if (bust)
+                {
+                    writeLine("Player busts! Dealer wins!");
+                }
+                else if (playerTotal > dealerTotal)
+                {
+                    writeLine("Player wins!");
+                }
+                else if (playerTotal == dealerTotal)
+                {
+                    writeLine("It's a draw!");
+                }
+                else
+                {
+                    writeLine("Dealer wins!");
+                }
+
+                writeLine("");
+                writeLine("Do you want to play again? [yes] or [no]");
+                if (!getYesNo())
+                    break;
             }
-              
-
-
-
 
             /*
             //Shows the green title text
@@ -267,7 +343,7 @@ namespace TextCarnivalV2.Source.CarnivalGames.AllCarnivalGamesClasses
     class Card
     {
         private String suit;  // "H","D","S","C"
-        private int rank;  // 1-13
+        public int rank;  // 1-13
 
         public Card (int rank, String suit)
         {
