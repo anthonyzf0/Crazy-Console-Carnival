@@ -56,7 +56,7 @@ namespace TextCarnivalV2.Source.CarnivalGames.AllCarnivalGames
 
             if (opt1 == "work")
             {
-                writeLine("|e0You decided to work longer");
+                writeLine("|e0You decided to work longer|");
                 wait(2);
                 int money = 200;
                 writeOut("A new face, Roger, walks in and asks for some beer");
@@ -80,7 +80,7 @@ namespace TextCarnivalV2.Source.CarnivalGames.AllCarnivalGames
                 wait(2);
                 writeOut("Your attitude with Roger is now " + rogera);
                 wait(2);
-                writeOut("|e0You got $" + money + " for the night");
+                writeOut("|e0You got $" + money + " for the night|");
 
                wait(2);
                 writeOut("While at home, the card is taunting you, asking you to call the number");
@@ -124,17 +124,33 @@ namespace TextCarnivalV2.Source.CarnivalGames.AllCarnivalGames
                         wait(2);
                         writeOut("the phone rings and all you here is \"Bigslice park\"");
                         wait(2);
-                        writeOut("You kow exctly where that is. it's just a coulple minute drive from here");
+                        writeOut("You kow exactly where that is. it's just a coulple minute drive from here");
                         wait(2);
                         writeOut("Do you [go] or [stay]");
                         String opt4 = getOption("go", "stay");
-                            if(opt4 == "go")
+                        if (opt4 == "go")
+                            writeOut("You see a hooded man dressed in all black. You can just barely make out his face as Rob");
+                        wait(2);
+                        writeOut("There's a gunshot and your vision fades to black");
+                        wait(2);
+                        writeOut("|e0GAME OVER|");
+                        wait(2);
+                        writeOut("INSERT $5 TO REVIVE");
+                        wait(2);
                         {
                             
                         }
                             if(opt4 == "stay")
                         {
                             writeLine("|e0You decide not to go");
+                            wait(2);
+                            writeLine("You don't wake up the next day");
+                            wait(2);
+                            writeLine("GAME OVER");
+                            wait(2);
+                            writeOut("INSERT $5 TO REVIVE");
+                            wait(2);
+
                         }
                     }
                         if (opt3 == "avoid")
@@ -143,7 +159,14 @@ namespace TextCarnivalV2.Source.CarnivalGames.AllCarnivalGames
                         writeOut("the line goes dead");
                         wait(2);
                         writeOut("you call back multiple times, but nobody ever picks up");
-                         }
+                        wait(2);
+                        writeOut("You don't wake up the next day");
+                        wait(2);
+                        writeOut("GAME OVER");
+                        wait(2);
+                        writeOut("INSERT $5 TO REVIVE");
+                        wait(2);
+                    }
 
                 }
                    if(opt2 == "ignore")
@@ -151,7 +174,14 @@ namespace TextCarnivalV2.Source.CarnivalGames.AllCarnivalGames
                     int meter = 3;
                     writeLine("|e0Your personality score is now " + meter);
                     wait(2);
-                    writeOut("");
+                    writeOut("You never see Rob again");
+                    wait(2);
+                    writeOut("You continue to work away at the bar until you die");
+                    wait(2);
+                    writeOut("GAME OVER");
+                    wait(2);
+                    writeOut("INSERT $5 TO REVIVE");
+                    wait(2);
                 }
             }
             if (opt1 == "leave")
@@ -159,6 +189,13 @@ namespace TextCarnivalV2.Source.CarnivalGames.AllCarnivalGames
                 writeLine("|e0You decided to leave");
                 int money = 150;
                 writeOut("You got $" + money +" for the night");
+                wait(2);
+                writeOut("You continue you uneventful life and work at the bar until you die");
+                wait(2);
+                writeOut("|e0GAME OVER|");
+                wait(2);
+                writeOut("INSERT $5 TO REVIVE");
+                wait(2);
             }
 
 
