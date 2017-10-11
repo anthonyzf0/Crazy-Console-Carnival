@@ -131,7 +131,7 @@ namespace TextCarnivalV2.Source.Server
             Type[] typeList = allTypes.Where(t => String.Equals(t.Namespace, "TextCarnivalV2.Source.CarnivalGames.AllCarnivalGames", StringComparison.Ordinal)).ToArray();
 
             //Seperates and parses those types into those of Carnival Game
-            allGames = typeList.Select(i => (CarnivalGame)Activator.CreateInstance(i)).ToArray();
+            allGames = typeList.Where( i=>i.BaseType.Name == "CarnivalGame").Select(i => (CarnivalGame)Activator.CreateInstance(i)).ToArray();
 
         }
 
