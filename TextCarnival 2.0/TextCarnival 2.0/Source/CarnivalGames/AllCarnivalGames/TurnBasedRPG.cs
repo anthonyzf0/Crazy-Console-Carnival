@@ -180,24 +180,26 @@ namespace TextCarnivalV2.Source.CarnivalGames.AllCarnivalGames
 
 
 
-/*/
-                        writeOut("Do you want to bet on anything else? ");
-                        yorn = getOption("yes", "no");
+                    /*/
+                                            writeOut("Do you want to bet on anything else? ");
+                                            yorn = getOption("yes", "no");
 
-                        if (yorn == "yes")
-                            again = true;
-                        else again = false;/*/
+                                            if (yorn == "yes")
+                                                again = true;
+                                            else again = false;/*/
                     //}
-
+                    
                     // ending
                     chips = chips + payout;
-                    if (red == true)
+                    if (num1 == 0)                    
+                        writeOut("It was a 0, green");                    
+                    else if (red == true)
                         writeOut("It was " + num1 + ", red");
                     else
                         writeOut("It was " + num1 + ", black");
 
 
-                    writeOut("You won " + payout + " chips \n ");
+                    writeOut("You won " + payout + " chips \n  ");
 
 
 
