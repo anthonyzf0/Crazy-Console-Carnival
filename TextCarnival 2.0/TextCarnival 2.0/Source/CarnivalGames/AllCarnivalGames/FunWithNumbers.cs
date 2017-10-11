@@ -33,13 +33,13 @@ namespace TextCarnivalV2.Source.CarnivalGames.AllCarnivalGames
             bool ans = true;
 
             if (openLine == 0) { writeOut("haha welcome to the game hope you like numbers idiot"); }
-            if (openLine == 1) { writeOut("ooh baby give me the hard math"); }
+            if (openLine == 1) { writeOut("The FitnessGram Pacer Test is a multistage aerobic capacity test that progressively gets more difficult as it continues. The 20 meter pacer test will begin in 30 seconds. Line up at the start. The running speed starts slowly, but gets faster each minute after you hear this signal. [beep] A single lap should be completed each time you hear this sound. [ding] Remember to run in a straight line and run as long possible. The second time you fail to complete a lap before the sound. Your test will begin on the word start. On your mark, get ready, start"); }
             if (openLine == 2) { writeOut("haha ok i dont think you know what youre getting yourself into but lets do it"); }
             if (openLine == 3) { writeOut("no matter how you do on these you'll still probably be better than beckett because he has no idea how numbers work"); }
             if (openLine == 4) { writeOut("how we doin its ya boi, computer commin at ya with some simple math"); }
             if (openLine == 5) { writeOut("i hope you appreciate how every single thing about this game is random"); }
             if (openLine == 6) { writeOut("MY CAPS LOCK IS STUCK PLEASE HELP haha just kidding i tricked you"); }
-            if (openLine == 7) { writeOut("WUBBA LUBBA DUB D- *gets shot*"); }
+            if (openLine == 7) { writeOut("WUBBA LUBBA DUB D- *gets cancer*"); }
             if (openLine == 8) { writeOut("i am the physical manifestation of depression"); }
             if (openLine == 9) { writeOut("this game was made by chris pettinari, not that you care, though"); }
             String unit = "";
