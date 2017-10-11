@@ -26,9 +26,11 @@ namespace TextCarnivalV2.Source.CarnivalGames.AllCarnivalGames
             int num1 = rng.Next(1, 100);
             int num2 = rng.Next(1, 100);
             int oper = rng.Next(0, 4);
-            int un = rng.Next(0, 10);
+            int un = rng.Next(0, 11);
             int openLine = rng.Next(0, 10);
             int correctLine = rng.Next(0, 5);
+            int wrongLine = rng.Next(0, 5);
+            bool ans = true;
 
             if (openLine == 0) { writeOut("haha welcome to the game hope you like numbers idiot"); }
             if (openLine == 1) { writeOut("ooh baby give me the hard math"); }
@@ -50,58 +52,15 @@ namespace TextCarnivalV2.Source.CarnivalGames.AllCarnivalGames
             if (un == 5) {unit = " minkey(s)";}
             if (un == 6) {unit = " shamwow(s)";}
             if (un == 7) {unit = " quncc(s)";}
-            if (un == 8) {unit = " time(s) ive wanted to kms";}
+            if (un == 8) {unit = " S U C C";}
             if (un == 9) {unit = " butt(s)";}
             if (un == 10){unit = " tuncc(s)";}
 
             int solution = 69;
 
             int input;
-            if (oper == 3)
-            {
-                while (num1 % num2 != 0)
-                {
-                    num1 = rng.Next(1, 100);
-                    num2 = rng.Next(1, 100);
-                }
-                solution = num1 / num2;
+            
 
-                writeOut(num1 + unit + " / " + num2 + unit + "?  (Only write the number)");
-
-                input = Convert.ToInt32(getInput());
-
-                if (input == solution)
-                {
-                    writeOut("nice job you got it right");
-                }
-                else
-                {
-                    writeOut("you are poop");
-                }
-            }
-
-            if (oper == 2)
-            {
-                solution = num1 * num2;
-
-                writeOut(num1 + unit + " * " + num2 + unit + "?  (Only write the number)");
-
-                input = Convert.ToInt32(getInput());
-
-                if (input == solution)
-                {
-                    if (correctLine == 0) { writeOut("haha nice job you got it right"); }
-                    if (correctLine == 1) { writeOut("the battle is won, but the war rages on"); }
-                    if (correctLine == 2) { writeOut("MISHUN COMPREE"); }
-                    if (correctLine == 3) { writeOut("HAHAHAHAHHAHAHAHAHAHAHAHAHAHAHHAH nice"); }
-                    if (correctLine == 4) { writeOut("if you are reading this, nice job, you got the question right"); }
-                    if (correctLine == 5) { writeOut("you did the math right but don't watch an anime called boku"); }
-                }
-                else
-                {
-                    writeOut("you are poop");
-                }
-            }
 
             if (oper == 1)
             {
@@ -111,20 +70,11 @@ namespace TextCarnivalV2.Source.CarnivalGames.AllCarnivalGames
 
                 input = Convert.ToInt32(getInput());
 
-                if (input == solution)
+                if (input != solution)
                 {
-                    if (correctLine == 0) { writeOut("haha nice job you got it right"); }
-                    if (correctLine == 1) { writeOut("the battle is won, but the war rages on"); }
-                    if (correctLine == 2) { writeOut("MISHUN COMPREE"); }
-                    if (correctLine == 3) { writeOut("HAHAHAHAHHAHAHAHAHAHAHAHAHAHAHHAH nice"); }
-                    if (correctLine == 4) { writeOut("if you are reading this, nice job, you got the question right"); }
-                    if (correctLine == 5) { writeOut("you did the math right but don't watch an anime called boku"); }
-                 
+                    ans = false;
                 }
-                else
-                {
-                    writeOut("you are poop");
-                }
+
             }
 
             if (oper == 0)
@@ -135,24 +85,75 @@ namespace TextCarnivalV2.Source.CarnivalGames.AllCarnivalGames
 
                 input = Convert.ToInt32(getInput());
 
-
-                if (input == solution)
+                if (input != solution)
                 {
-                    if (correctLine == 0) { writeOut("haha nice job you got it right"); }
-                    if (correctLine == 1) { writeOut("the battle is won, but the war rages on"); }
-                    if (correctLine == 2) { writeOut("MISHUN COMPREE"); }
-                    if (correctLine == 3) { writeOut("HAHAHAHAHHAHAHAHAHAHAHAHAHAHAHHAH nice"); }
-                    if (correctLine == 4) { writeOut("if you are reading this, nice job, you got the question right"); }
-                    if (correctLine == 5) { writeOut("you did the math right but don't watch an anime called boku"); }
+                    ans = false;
                 }
-                else
-                {
-                    writeOut("you are poop");
-                }
-            }
-            
 
-            
             }
+
+            if (oper == 2)
+            {
+                if (num1 > 12)
+                    num1 = rng.Next(0, 13);
+
+                if (num2 > 12)
+                    num2 = rng.Next(0, 13);
+
+                solution = num1 * num2;
+
+                writeOut(num1 + unit + " * " + num2 + unit + "?  (Only write the number)");
+
+                input = Convert.ToInt32(getInput());
+
+                if (input != solution)
+                {
+                    ans = false;
+                }
+
+            }
+
+            if (oper == 3)
+            {
+                while (num1 % num2 != 0)
+                {
+                    num1 = rng.Next(1, 100);
+                    num2 = rng.Next(1, 100);
+                }
+
+                solution = num1 / num2;
+
+                writeOut(num1 + unit + " / " + num2 + unit + "?  (Only write the number)");
+
+                input = Convert.ToInt32(getInput());
+
+                if (input != solution)
+                {
+                    ans = false;
+                }
+
+            }
+
+            if (ans)
+            {
+                if (correctLine == 0) { writeOut("haha nice job you got it right"); }
+                if (correctLine == 1) { writeOut("the battle is won, but the war rages on"); }
+                if (correctLine == 2) { writeOut("MISHUN COMPREE"); }
+                if (correctLine == 3) { writeOut("HAHAHAHAHHAHAHAHAHAHAHAHAHAHAHHAH nice"); }
+                if (correctLine == 4) { writeOut("if you are reading this, nice job, you got the question right"); }
+                if (correctLine == 5) { writeOut("you did the math right but don't watch an anime called boku"); }
+            }
+            else
+            {
+                if (wrongLine == 0) { writeOut("you are poop"); }
+                if (wrongLine == 1) { writeOut("git gud lmao"); }
+                if (wrongLine == 2) { writeOut("looks like someone needs a calculator"); }
+                if (wrongLine == 3) { writeOut("no what are you dumb"); }
+                if (wrongLine == 4) { writeOut("B O I"); }
+                if (wrongLine == 5) { writeOut("hahahhahahhAHAhAhAhAhAHAHAHAHAHAHAHAH no you got it wrong"); }
+                writeOut("The answer was " + solution);
+            }
+
+        }
         }
     }
