@@ -1,41 +1,5 @@
-C:\Users\antho\OneDrive\Documents\GitHub\Crazy-Console-Carnival\TextCarnival 2.0\TextCarnival 2.0\bin\Debug\TextCarnival 2.0.exe.config
-C:\Users\antho\OneDrive\Documents\GitHub\Crazy-Console-Carnival\TextCarnival 2.0\TextCarnival 2.0\bin\Debug\TextCarnival 2.0.exe
-C:\Users\antho\OneDrive\Documents\GitHub\Crazy-Console-Carnival\TextCarnival 2.0\TextCarnival 2.0\bin\Debug\TextCarnival 2.0.pdb
-C:\Users\antho\OneDrive\Documents\GitHub\Crazy-Console-Carnival\TextCarnival 2.0\TextCarnival 2.0\obj\Debug\TextCarnival 2.0.exe
-C:\Users\antho\OneDrive\Documents\GitHub\Crazy-Console-Carnival\TextCarnival 2.0\TextCarnival 2.0\obj\Debug\TextCarnival 2.0.pdb
-C:\Users\antho\OneDrive\Documents\GitHub\Crazy-Console-Carnival\TextCarnival 2.0\TextCarnival 2.0\obj\Debug\TextCarnival.csprojResolveAssemblyReference.cache
 C:\Users\eahscs\Documents\GitHub\Crazy-Console-Carnival\TextCarnival 2.0\TextCarnival 2.0\bin\Debug\TextCarnival 2.0.exe.config
 C:\Users\eahscs\Documents\GitHub\Crazy-Console-Carnival\TextCarnival 2.0\TextCarnival 2.0\bin\Debug\TextCarnival 2.0.exe
 C:\Users\eahscs\Documents\GitHub\Crazy-Console-Carnival\TextCarnival 2.0\TextCarnival 2.0\bin\Debug\TextCarnival 2.0.pdb
-C:\Users\eahscs\Documents\GitHub\Crazy-Console-Carnival\TextCarnival 2.0\TextCarnival 2.0\obj\Debug\TextCarnival.csprojResolveAssemblyReference.cache
 C:\Users\eahscs\Documents\GitHub\Crazy-Console-Carnival\TextCarnival 2.0\TextCarnival 2.0\obj\Debug\TextCarnival 2.0.exe
 C:\Users\eahscs\Documents\GitHub\Crazy-Console-Carnival\TextCarnival 2.0\TextCarnival 2.0\obj\Debug\TextCarnival 2.0.pdb
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-C:\Users\Andrew Spaziani\Documents\GitHub\Crazy-Console-Carnival\TextCarnival 2.0\TextCarnival 2.0\bin\Debug\TextCarnival 2.0.exe.config
-C:\Users\Andrew Spaziani\Documents\GitHub\Crazy-Console-Carnival\TextCarnival 2.0\TextCarnival 2.0\bin\Debug\TextCarnival 2.0.exe
-C:\Users\Andrew Spaziani\Documents\GitHub\Crazy-Console-Carnival\TextCarnival 2.0\TextCarnival 2.0\bin\Debug\TextCarnival 2.0.pdb
-C:\Users\Andrew Spaziani\Documents\GitHub\Crazy-Console-Carnival\TextCarnival 2.0\TextCarnival 2.0\obj\Debug\TextCarnival.csprojResolveAssemblyReference.cache
-C:\Users\Andrew Spaziani\Documents\GitHub\Crazy-Console-Carnival\TextCarnival 2.0\TextCarnival 2.0\obj\Debug\TextCarnival.csproj.CoreCompileInputs.cache
-C:\Users\Andrew Spaziani\Documents\GitHub\Crazy-Console-Carnival\TextCarnival 2.0\TextCarnival 2.0\obj\Debug\TextCarnival 2.0.exe
-C:\Users\Andrew Spaziani\Documents\GitHub\Crazy-Console-Carnival\TextCarnival 2.0\TextCarnival 2.0\obj\Debug\TextCarnival 2.0.pdb
->>>>>>> 3f5a9abd873368c54633e1251fe8c15cc01204c8
-=======
->>>>>>> 84c7d5c28f97ce9c3a8cbfa980c6b1768db93e6b
-=======
->>>>>>> 62d175e912fceeef644d90d6cc93e27ec57a563b
-=======
->>>>>>> d22a66238f51cd266849da0869a3f43a318d466f
-=======
-C:\Users\Connor\Documents\GitHub\Crazy-Console-Carnival\TextCarnival 2.0\TextCarnival 2.0\bin\Debug\TextCarnival 2.0.exe.config
-C:\Users\Connor\Documents\GitHub\Crazy-Console-Carnival\TextCarnival 2.0\TextCarnival 2.0\bin\Debug\TextCarnival 2.0.exe
-C:\Users\Connor\Documents\GitHub\Crazy-Console-Carnival\TextCarnival 2.0\TextCarnival 2.0\bin\Debug\TextCarnival 2.0.pdb
-C:\Users\Connor\Documents\GitHub\Crazy-Console-Carnival\TextCarnival 2.0\TextCarnival 2.0\obj\Debug\TextCarnival.csprojResolveAssemblyReference.cache
-C:\Users\Connor\Documents\GitHub\Crazy-Console-Carnival\TextCarnival 2.0\TextCarnival 2.0\obj\Debug\TextCarnival 2.0.exe
-C:\Users\Connor\Documents\GitHub\Crazy-Console-Carnival\TextCarnival 2.0\TextCarnival 2.0\obj\Debug\TextCarnival 2.0.pdb
-C:\Users\eahscs\Documents\GitHub\Crazy-Console-Carnival\TextCarnival 2.0\TextCarnival 2.0\obj\Debug\TextCarnival.csprojResolveAssemblyReference.cache
->>>>>>> 4085f0227c7c29fad436d3c16dc3a1126f8f636e
