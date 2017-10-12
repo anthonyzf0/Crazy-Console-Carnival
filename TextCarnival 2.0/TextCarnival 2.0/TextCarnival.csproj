@@ -46,10 +46,14 @@
     <Compile Include="Source\CarnivalGames\AllCarnivalGames\Casino.cs" />
     <Compile Include="Source\CarnivalGames\AllCarnivalGames\ExampleGame.cs" />
 <<<<<<< HEAD
+<<<<<<< HEAD
     <Compile Include="Source\CarnivalGames\AllCarnivalGames\ReactorGame.cs" />
 =======
     <Compile Include="Source\CarnivalGames\AllCarnivalGames\TurnBasedRPG.cs" />
 >>>>>>> f8cb5dc94a0a29af28ff9d797a45671d2b41b92e
+=======
+    <Compile Include="Source\CarnivalGames\AllCarnivalGames\FunWithNumbers.cs" />
+>>>>>>> 5ed9963aa94fb879c3873e7a49d9fd3916b59d43
     <Compile Include="Source\CarnivalGames\CarnivalGame.cs" />
     <Compile Include="Source\Client\Client.cs" />
     <Compile Include="Source\Program.cs" />
