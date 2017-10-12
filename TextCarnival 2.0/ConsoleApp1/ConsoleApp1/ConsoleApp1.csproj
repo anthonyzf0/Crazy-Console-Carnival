@@ -1,14 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{BE2B1FBE-3790-4059-A55E-8CBE16B5E600}</ProjectGuid>
+    <ProjectGuid>{C2C824A4-F06A-482A-9E16-CC33AFA8B43A}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>TextCarnival_2._0</RootNamespace>
-    <AssemblyName>TextCarnival 2.0</AssemblyName>
+    <RootNamespace>ConsoleApp1</RootNamespace>
+    <AssemblyName>ConsoleApp1</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,41 +42,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Source\CarnivalGames\AllCarnivalGames\Casino.cs" />
-    <Compile Include="Source\CarnivalGames\AllCarnivalGames\ExampleGame.cs" />
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    <Compile Include="Source\CarnivalGames\AllCarnivalGames\ReactorGame.cs" />
-=======
-    <Compile Include="Source\CarnivalGames\AllCarnivalGames\TurnBasedRPG.cs" />
->>>>>>> f8cb5dc94a0a29af28ff9d797a45671d2b41b92e
-=======
-    <Compile Include="Source\CarnivalGames\AllCarnivalGames\FunWithNumbers.cs" />
->>>>>>> 5ed9963aa94fb879c3873e7a49d9fd3916b59d43
-=======
-    <Compile Include="Source\CarnivalGames\AllCarnivalGames\SmartBot.cs" />
->>>>>>> 3f5a9abd873368c54633e1251fe8c15cc01204c8
-=======
-    <Compile Include="Source\CarnivalGames\AllCarnivalGames\TheTakeDownOfJakePaul.cs" />
->>>>>>> 84c7d5c28f97ce9c3a8cbfa980c6b1768db93e6b
-    <Compile Include="Source\CarnivalGames\CarnivalGame.cs" />
-    <Compile Include="Source\Client\Client.cs" />
-    <Compile Include="Source\Program.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Source\Server\Server.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
-       Other similar extension points exist, see Microsoft.Common.targets.
-  <Target Name="BeforeBuild">
-  </Target>
-  <Target Name="AfterBuild">
-  </Target>
-  -->
 </Project>
