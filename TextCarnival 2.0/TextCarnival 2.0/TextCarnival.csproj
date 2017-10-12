@@ -43,7 +43,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <Compile Include="Source\CarnivalGames\AllCarnivalGames\Casino.cs" />
+=======
+    <Compile Include="Source\CarnivalGames\AllCarnivalGames\2048.cs" />
+>>>>>>> 4085f0227c7c29fad436d3c16dc3a1126f8f636e
     <Compile Include="Source\CarnivalGames\AllCarnivalGames\ExampleGame.cs" />
 <<<<<<< HEAD
 <<<<<<< HEAD
