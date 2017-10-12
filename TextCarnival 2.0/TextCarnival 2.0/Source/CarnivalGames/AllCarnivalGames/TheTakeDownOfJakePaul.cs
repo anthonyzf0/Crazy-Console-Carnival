@@ -52,23 +52,25 @@ namespace TextCarnivalV2.Source.CarnivalGames.AllCarnivalGames
 
             while (j == false)
             {
-                placement(board);
-                clear();
-                for (int i = 0; i < board.GetLength(0); i++)
+                for (int k = 1; k <= 2; k++)
                 {
-                    for (int j = 0; j < board.GetLength(1); j++)
+                    placement(board, k);
+                    clear();
+                    for (int i = 0; i < board.GetLength(0); i++)
                     {
-                        if (j == 2)
+                        for (int j = 0; j < board.GetLength(1); j++)
                         {
-                            write(board[i, j] + "\n");
-                        }
-                        else
-                        {
-                            write(board[i, j]);
+                            if (j == 2)
+                            {
+                                write(board[i, j] + "\n");
+                            }
+                            else
+                            {
+                                write(board[i, j]);
+                            }
                         }
                     }
                 }
-                
                 
             }
                  
@@ -78,15 +80,14 @@ namespace TextCarnivalV2.Source.CarnivalGames.AllCarnivalGames
                 
         }
 
-        public void placement(String[,] board)
+        public void placement(String[,] board, int n)
         {
-            int r, c, n;
-            writeOut("Where will you place your letter? Ex. (player# row column (Row and Column must be c#))");
-            String[] place = Console.ReadLine().Split(' ');
-
-            n = Convert.ToInt32(place[0]);
-            r = Convert.ToInt32(place[1]);
-            c = Convert.ToInt32(place[2]);
+            int r, c;
+            writeOut("Where will you place your letter? must be in format \"xy\"");
+            String place = getInput();
+            
+            r = Convert.ToInt32(""+place[0]);
+            c = Convert.ToInt32(""+place[1]);
 
             if (n == 1)
             {
