@@ -50,6 +50,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     <Compile Include="Source\CarnivalGames\AllCarnivalGames\ReactorGame.cs" />
 =======
     <Compile Include="Source\CarnivalGames\AllCarnivalGames\TurnBasedRPG.cs" />
@@ -66,6 +67,9 @@
 =======
     <Compile Include="Source\CarnivalGames\AllCarnivalGames\Superman v0.1.cs" />
 >>>>>>> 62d175e912fceeef644d90d6cc93e27ec57a563b
+=======
+    <Compile Include="Source\CarnivalGames\AllCarnivalGames\Hangman.cs" />
+>>>>>>> d22a66238f51cd266849da0869a3f43a318d466f
     <Compile Include="Source\CarnivalGames\CarnivalGame.cs" />
     <Compile Include="Source\Client\Client.cs" />
     <Compile Include="Source\Program.cs" />
