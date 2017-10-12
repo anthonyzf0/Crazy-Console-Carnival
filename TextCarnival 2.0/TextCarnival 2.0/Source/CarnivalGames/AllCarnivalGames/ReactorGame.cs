@@ -23,7 +23,7 @@ namespace TextCarnivalV2.Source.CarnivalGames.AllCarnivalGames
         {
             showTitle("WELCOME TO THE BEST REACTION GAME EVER");
             writeOut("A random letter will appear and you will have to type it as fast as you can.");
-          
+            writeOut("YOU DON'T NEED TO HIT ENTER");
 
             writeOut("What difficulty do you want to play on: " +
                 "\neasy (1 second timer and lowercase letters) " +
@@ -42,12 +42,13 @@ namespace TextCarnivalV2.Source.CarnivalGames.AllCarnivalGames
            
             if (difficulty == "easy")
             {
+                writeLine("COUNTDOWN");
+                writeLine("(3)");
                 wait(1);
-                writeLine("3");
+                writeLine("(2)");
                 wait(1);
-                writeLine("2");
+                writeLine("(1)");
                 wait(1);
-                writeLine("1");
                 while (wrong < 1)
                 {
                     int letter = rnd.Next(1, 27);
@@ -83,12 +84,12 @@ namespace TextCarnivalV2.Source.CarnivalGames.AllCarnivalGames
             }
             else if( difficulty == "medium")
             {
+                writeLine("COUNTDOWN");
+                writeLine("(3)");
                 wait(1);
-                writeLine("3");
+                writeLine("(2)");
                 wait(1);
-                writeLine("2");
-                wait(1);
-                writeLine("1");
+                writeLine("(1)");
                 while (wrong < 1)
                 {
                     
@@ -124,12 +125,12 @@ namespace TextCarnivalV2.Source.CarnivalGames.AllCarnivalGames
             }
             else if( difficulty == "hard")
             {
+                writeLine("COUNTDOWN");
+                writeLine("(3)");
                 wait(1);
-                writeLine("3");
+                writeLine("(2)");
                 wait(1);
-                writeLine("2");
-                wait(1);
-                writeLine("1");
+                writeLine("(1)");
                 while (wrong < 1)
                 {
                     int letter = rnd.Next(1, 63);
