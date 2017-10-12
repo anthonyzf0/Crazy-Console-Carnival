@@ -47,6 +47,7 @@
     <Compile Include="Source\CarnivalGames\AllCarnivalGames\ExampleGame.cs" />
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     <Compile Include="Source\CarnivalGames\AllCarnivalGames\ReactorGame.cs" />
 =======
     <Compile Include="Source\CarnivalGames\AllCarnivalGames\TurnBasedRPG.cs" />
@@ -54,6 +55,9 @@
 =======
     <Compile Include="Source\CarnivalGames\AllCarnivalGames\FunWithNumbers.cs" />
 >>>>>>> 5ed9963aa94fb879c3873e7a49d9fd3916b59d43
+=======
+    <Compile Include="Source\CarnivalGames\AllCarnivalGames\SmartBot.cs" />
+>>>>>>> 3f5a9abd873368c54633e1251fe8c15cc01204c8
     <Compile Include="Source\CarnivalGames\CarnivalGame.cs" />
     <Compile Include="Source\Client\Client.cs" />
     <Compile Include="Source\Program.cs" />
