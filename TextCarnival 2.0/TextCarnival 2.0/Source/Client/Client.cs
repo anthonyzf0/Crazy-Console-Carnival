@@ -15,7 +15,7 @@ namespace TextCarnivalV2.Source.Client
         private NetworkStream stream;
 
         //Used for data transfer
-        private static Byte[] bytes = new Byte[1024];
+        private static Byte[] bytes = new Byte[2048];
         
         //Called to create a new client
         public Client(bool useLocal = false)
